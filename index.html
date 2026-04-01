@@ -1,0 +1,224 @@
+<!-- ===================== index.html ===================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <img src="/image/cd.png" class="avatar">
+        <h1>Thi Van Anh Tran</h1>
+        <p>Line cook, Humber Polytechnic Culinary Management</p>
+        <br>
+        <div class="buttons">
+            <a href="#contact" class="btn">Contact</a>
+            
+        </div>
+    </div>
+</header>
+
+<section class="about fade">
+    <h2>About Me</h2>
+    <p>I am a passionate culinary student currently studying in Canada, with hands-on experience working in professional kitchens. I specialize in modern cuisine and creative plating.</p>
+</section>
+
+<section class="skills fade">
+    <h2>Journey</h2>
+    <div class="skill">
+        <div class="item"> 
+            <p>Humber Polytechnic
+Etobicoke, ON
+
+Culinary Management, January 2025 - present
+During my time at Humber College, I have been building a strong foundation in culinary skills and kitchen operations. Through hands-on classes and practical training, I’ve developed my confidence in food preparation, cooking techniques, and teamwork.
+This experience has helped me grow both technically and professionally, preparing me for real-world kitchen environments and my upcoming internship.</p>
+        </div>
+    </div>
+</section>
+
+<section class="experience fade">
+    <h2>Internship Objective</h2>
+    <div class="timeline">
+        <div class="item">
+    <h3>Kitchen Intern</h3>
+    
+    <p>
+        - Develop and refine culinary skills in a professional kitchen environment<br>
+        - Perform effectively in a fast-paced, high-quality service setting<br>
+        - Apply practical cooking techniques and assist during service<br>
+        - Gain hands-on experience in food preparation and presentation<br>
+        - Build strong teamwork and communication skills in the kitchen
+    </p>
+</div>
+    </div>
+</section>
+
+<section class="portfolio fade">
+    <h2>My Dishes</h2>
+    <div class="gallery">
+        <img src="/image/anh1.png">
+        <img src="/image/anh2.png">
+        <img src="/image/anh3.png">
+        <img src="/image/anh4.png">
+        <img src="/image/anh5.png">
+        <img src="/image/anh6.png">
+        <img src="/image/anh7.png">
+        <img src="/image/anh8.png">
+        <img src="/image/anh9.png">
+    </div>
+</section>
+
+<section class="contact fade" id="contact">
+    <h2>Contact</h2>
+    <p>Email: ttvanh070305@gmail.com</p>
+    <p>Phone: 6472199002</p>
+    <p>Location: Canada</p>
+    <div class="contact-links">
+    <a href="https://profile.indeed.com/p/thivananht-b1lhdvq" class="so">
+        <img src="/image/indeed.png" class="icon">
+        
+    </a>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ===================== style.css ===================== -->
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.hero {
+    height: 100vh;
+    background: url("https://source.unsplash.com/1600x900/?kitchen") center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.btn {
+    background: #d4a373;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #d4a373;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills .bar {
+    background: #333;
+    height: 10px;
+    margin: 10px auto;
+    width: 60%;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #d4a373;
+}
+
+.timeline .item {
+    margin: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.contact-links {
+    display: flex;
+    justify-content: center; /* căn ngang */
+    align-items: center;     /* căn dọc */
+    
+}
+.so img {
+    width: 50px;
+}
+</style>
+
+
+<!-- ===================== script.js ===================== -->
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            el.classList.add('show');
+        }
+    });
+});
+</script>
